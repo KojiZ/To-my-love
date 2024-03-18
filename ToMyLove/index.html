@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To my love</title>
+  </head>
+  <style>
+    body {
+      background-color: pink;
+    }
+    .painel {
+      width: 500px;
+      height: 500px;
+      background-color: white;
+      margin: auto;
+      border-radius: 20px;
+      text-align: center;
+      padding-top: 50px;
+      font-family: monospace;
+    }
+
+    #sim {
+      height: 40px;
+      width: 60px;
+      background-color: rgb(130, 172, 255);
+      border: 2px solid white;
+      border-radius: 10px;
+      color: white;
+      margin-left: -60px;
+      text-decoration: none;
+    }
+    #nao {
+      position: absolute;
+      height: 40px;
+      width: 60px;
+      background-color: rgb(130, 172, 255);
+      border: 2px solid white;
+      border-radius: 10px;
+      color: white;
+      margin-left: 10px;
+    }
+
+    .imgf:hover {
+      scale: 1.1;
+    }
+  </style>
+
+  <body>
+    <br />
+    <br />
+    <div class="painel">
+      <h1>Eu te amo muito meu bem</h1>
+      <img src="9PmT.gif" alt="" />
+      <h2>Quer ser a única yuumi do aphelios ??</h2>
+      <center>
+        <a
+          href="https://youtu.be/rSq1URfEEC8?si=7nKM5C_mdD5HZ5KA"
+          target="_blank"
+          onclick="vida()"
+          ><button class="imgf" id="sim">Sim!!</button></a
+        >
+        <button onmouseover="love()" id="nao">Não!!</button>
+      </center>
+    </div>
+    <script>
+      function love() {
+        var nao = document.getElementById("nao");
+        var janela = window.innerWidth;
+        var altura = window.innerHeight;
+        var maxX = janela - nao.offsetWidth;
+        var maxY = altura - nao.offsetHeight;
+
+        var aleatóriox = Math.floor(Math.random() * maxX);
+        var aleatórioy = Math.floor(Math.random() * maxY);
+
+        nao.style.left = aleatóriox + "px";
+        nao.style.top = aleatórioy + "px";
+      }
+
+      function vida() {
+        alert("Agora você vai me ter pra sempre :) ");
+      }
+    </script>
+  </body>
+</html>
